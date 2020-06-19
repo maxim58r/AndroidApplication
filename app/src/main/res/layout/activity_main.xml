@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B413EF"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/textViewLl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#38DF13"
+        android:gravity="center"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textViewV11"
+            android:layout_width="205dp"
+            android:layout_height="170dp"
+            android:background="#fff"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="4"
+            android:text="@string/hello_world"
+            android:textAllCaps="true"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <View
+                    android:id="@+id/textViewV"
+                    android:layout_width="20dp"
+                    android:layout_height="50dp"
+                    android:background="#EFCB13" />
+
+
+                <View
+                    android:id="@+id/textViewV1"
+                    android:layout_width="20dp"
+                    android:layout_height="500dp"
+                    android:background="#A8A48D" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/textViewD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#1EDF09"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/textViewWLLL20"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F44336"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/textViewWLL"
+                android:layout_width="203dp"
+                android:layout_height="131dp"
+                android:layout_gravity="top|center"
+                android:background="#ff66ff"
+                android:text="@string/text" />
+
+            <View
+                android:id="@+id/textViewWLL1"
+                android:layout_width="156dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="#A5F821"
+                android:text="@string/text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textViewWLLL10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#03F8E1"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/textViewWLLL"
+                android:layout_width="203dp"
+                android:layout_height="132dp"
+                android:layout_gravity="top|center"
+                android:background="#EC0427"
+                android:text="@string/text" />
+
+            <View
+                android:id="@+id/textViewWLL2"
+                android:layout_width="156dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="#A5F821"
+                android:text="@string/text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
