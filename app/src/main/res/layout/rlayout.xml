@@ -3,35 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/nameTextEnter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type here: " />
+        android:text="@string/type_here" />
 
     <EditText
-        android:id="@+id/edit"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView4" />
+        android:layout_below="@id/nameTextEnter"
+        android:autofillHints="enter text"
+        android:inputType="textAutoCorrect" />
 
     <Button
         android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toStartOf="@id/ok"
         android:layout_alignTop="@id/ok"
-        android:text="Cancel" />
+        android:layout_toStartOf="@id/ok"
+        android:text="@string/cancel" />
 
     <Button
         android:id="@+id/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_below="@id/edit"
+        android:layout_below="@id/editText"
         android:layout_alignParentEnd="true"
-        android:text="OK" />
+        android:layout_marginEnd="10dp"
+        android:text="@string/ok" />
 
+    <CheckBox
+        android:id="@+id/chbExtMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:text="@string/chbExtMenu" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancel" />
 </RelativeLayout>
