@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // присваиваем обработчик кнопкам
         Log.d(TAG, "присваиваем обработчик кнопкам");
-        btnOk.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
     }
 
     @SuppressLint("SetTextI18n")
@@ -54,13 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ok:
                 // кнопка ОК
                 Log.d(TAG, "кнопка ОК");
-                tvOut.setText("Нажата кнопка ОК");
+                btnOk.setOnClickListener(v -> tvOut.setText("Нажата кнопка ОК"));
                 Toast.makeText(this, "Нажата кнопка ОК", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.cancel:
                 // кнопка Cancel
                 Log.d(TAG, "кнопка Cancel");
-                tvOut.setText("Нажата кнопка Cancel");
+                btnCancel.setOnClickListener(v -> tvOut.setText("Нажата Cancel"));
                 Toast.makeText(this, "Нажата кнопка Cancel", Toast.LENGTH_LONG).show();
                 break;
         }
